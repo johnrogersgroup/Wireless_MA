@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GraphView">
+            <connections>
+                <outlet property="RootView" destination="iN0-l3-epB" id="name-outlet-iN0-l3-epB"/>
+                <outlet property="SfChart" destination="477" id="name-outlet-477"/>
+                <outlet property="TypeLabel" destination="1006" id="name-outlet-1006"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="806" height="128"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="477" customClass="SFChart">
+                    <rect key="frame" x="4" y="4" width="798" height="120"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1006">
+                            <rect key="frame" x="8" y="0.0" width="73.5" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="8361"/>
+                                <constraint firstAttribute="height" constant="15" id="ccM-YB-sM0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Telegrafico" family="Telegrafico" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="1006" firstAttribute="top" secondItem="477" secondAttribute="top" id="hpC-8X-fbx"/>
+                        <constraint firstItem="1006" firstAttribute="leading" secondItem="477" secondAttribute="leading" constant="8" id="pWX-kK-wf8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="477" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="7395"/>
+                <constraint firstAttribute="trailing" secondItem="477" secondAttribute="trailing" constant="4" id="7556"/>
+                <constraint firstAttribute="bottom" secondItem="477" secondAttribute="bottom" constant="4" id="7717"/>
+                <constraint firstItem="477" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="7878"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="89.599999999999994" y="-183.50824587706148"/>
+        </view>
+    </objects>
+</document>

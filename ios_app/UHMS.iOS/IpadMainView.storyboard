@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ipad Main View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="IpadMainView" id="BYZ-38-t0r" customClass="IpadMainView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2241">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="48"/>
+                                <color key="backgroundColor" white="0.66666666666666696" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3909">
+                                <rect key="frame" x="0.0" y="68" width="1024" height="700"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4132">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="700"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bluetooth_icon2.png" translatesAutoresizingMaskIntoConstraints="NO" id="14632">
+                                                <rect key="frame" x="15" y="19" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="nGQ-BY-PTO"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4177">
+                                                <rect key="frame" x="0.0" y="4" width="60" height="60"/>
+                                                <connections>
+                                                    <action selector="BluetoothSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="48006"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="14632" firstAttribute="top" secondItem="4132" secondAttribute="top" constant="19" id="7gv-90-1oU"/>
+                                            <constraint firstAttribute="trailing" secondItem="4177" secondAttribute="trailing" id="Bmx-Sx-nEE"/>
+                                            <constraint firstItem="4177" firstAttribute="leading" secondItem="4132" secondAttribute="leading" id="Eb5-Ff-Ej0"/>
+                                            <constraint firstItem="4177" firstAttribute="centerX" secondItem="14632" secondAttribute="centerX" id="QJW-aR-9o6"/>
+                                            <constraint firstItem="4177" firstAttribute="top" secondItem="4132" secondAttribute="top" constant="4" id="Ynm-ZY-CO3"/>
+                                            <constraint firstItem="14632" firstAttribute="leading" secondItem="4132" secondAttribute="leading" constant="15" id="cYf-bs-asg"/>
+                                            <constraint firstItem="4177" firstAttribute="centerY" secondItem="14632" secondAttribute="centerY" id="vLw-aO-Dfr"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28519" customClass="GraphView">
+                                        <rect key="frame" x="70" y="36" width="950" height="150"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29013" customClass="GraphView">
+                                        <rect key="frame" x="68" y="194" width="950" height="150"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29118" customClass="GraphView">
+                                        <rect key="frame" x="68" y="382" width="950" height="150"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29119" customClass="GraphView">
+                                        <rect key="frame" x="68" y="540" width="950" height="150"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59803" customClass="NotesView">
+                                        <rect key="frame" x="70" y="10" width="240" height="680"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62140" customClass="MusicView">
+                                        <rect key="frame" x="70" y="10" width="240" height="680"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62911" customClass="SettingsView">
+                                        <rect key="frame" x="70" y="10" width="300" height="680"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4260" customClass="BluetoothView">
+                                        <rect key="frame" x="70" y="10" width="240" height="680"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="59803" firstAttribute="bottom" secondItem="62140" secondAttribute="bottom" id="07K-Ny-uMG"/>
+                                    <constraint firstItem="4260" firstAttribute="leading" secondItem="62911" secondAttribute="leading" id="7Ra-0X-4jJ"/>
+                                    <constraint firstItem="29013" firstAttribute="leading" secondItem="3909" secondAttribute="leading" constant="68" id="7h9-hQ-6Of"/>
+                                    <constraint firstItem="28519" firstAttribute="top" secondItem="3909" secondAttribute="top" constant="36" id="853-iS-BES"/>
+                                    <constraint firstItem="59803" firstAttribute="top" secondItem="4260" secondAttribute="top" id="BP5-1o-HCC"/>
+                                    <constraint firstItem="29118" firstAttribute="trailing" secondItem="29119" secondAttribute="trailing" id="DBt-YC-UWb"/>
+                                    <constraint firstAttribute="trailing" secondItem="28519" secondAttribute="trailing" constant="4" id="DqC-T3-d2z"/>
+                                    <constraint firstAttribute="trailing" secondItem="59803" secondAttribute="trailing" constant="714" id="Eqq-0I-K8V"/>
+                                    <constraint firstItem="29013" firstAttribute="trailing" secondItem="29118" secondAttribute="trailing" id="FMb-eU-QtM"/>
+                                    <constraint firstItem="4132" firstAttribute="top" secondItem="3909" secondAttribute="top" id="Fuj-ZC-MUI"/>
+                                    <constraint firstItem="29013" firstAttribute="leading" secondItem="29118" secondAttribute="leading" id="GXs-my-ir6"/>
+                                    <constraint firstItem="29118" firstAttribute="leading" secondItem="29119" secondAttribute="leading" id="LSK-4L-aoQ"/>
+                                    <constraint firstItem="28519" firstAttribute="leading" secondItem="4132" secondAttribute="trailing" constant="10" id="LkL-3C-TdF"/>
+                                    <constraint firstItem="4260" firstAttribute="leading" secondItem="59803" secondAttribute="leading" id="NBv-5j-neV"/>
+                                    <constraint firstItem="62911" firstAttribute="leading" secondItem="28519" secondAttribute="leading" id="RBH-2f-x7n"/>
+                                    <constraint firstItem="62911" firstAttribute="bottom" secondItem="59803" secondAttribute="bottom" id="Ra6-P0-FdL"/>
+                                    <constraint firstItem="29013" firstAttribute="top" secondItem="3909" secondAttribute="top" constant="194" id="RyA-ab-oC4"/>
+                                    <constraint firstItem="29119" firstAttribute="bottom" secondItem="62140" secondAttribute="bottom" id="SgJ-M4-ABQ"/>
+                                    <constraint firstItem="59803" firstAttribute="leading" secondItem="62140" secondAttribute="leading" id="TWc-G8-u3s"/>
+                                    <constraint firstItem="29119" firstAttribute="top" secondItem="3909" secondAttribute="top" constant="540" id="VI6-S5-ctX"/>
+                                    <constraint firstItem="29118" firstAttribute="top" secondItem="3909" secondAttribute="top" constant="382" id="XEV-DH-RSH"/>
+                                    <constraint firstItem="29118" firstAttribute="top" secondItem="29013" secondAttribute="bottom" constant="38" id="XeW-c9-bXm"/>
+                                    <constraint firstItem="4132" firstAttribute="leading" secondItem="3909" secondAttribute="leading" id="Z6p-m2-Fy7"/>
+                                    <constraint firstItem="29013" firstAttribute="top" secondItem="28519" secondAttribute="bottom" constant="8" symbolic="YES" id="ZkU-nW-9fy"/>
+                                    <constraint firstItem="59803" firstAttribute="trailing" secondItem="62140" secondAttribute="trailing" id="aFP-wt-QeS"/>
+                                    <constraint firstItem="4260" firstAttribute="trailing" secondItem="62140" secondAttribute="trailing" id="ccc-B2-ZJc"/>
+                                    <constraint firstItem="4132" firstAttribute="centerY" secondItem="4260" secondAttribute="centerY" id="cik-9A-RCR"/>
+                                    <constraint firstItem="62140" firstAttribute="top" secondItem="3909" secondAttribute="top" constant="10" id="eZ7-8d-5mG"/>
+                                    <constraint firstAttribute="trailing" secondItem="29013" secondAttribute="trailing" constant="6" id="h4x-aB-8bi"/>
+                                    <constraint firstAttribute="bottom" secondItem="4132" secondAttribute="bottom" id="jGJ-JJ-bor"/>
+                                    <constraint firstAttribute="trailing" secondItem="62911" secondAttribute="trailing" constant="654" id="kAC-sj-Cac"/>
+                                    <constraint firstItem="4260" firstAttribute="top" secondItem="62140" secondAttribute="top" id="mNm-sg-nmt"/>
+                                    <constraint firstItem="4260" firstAttribute="top" secondItem="62911" secondAttribute="top" id="pfk-R8-Y2t"/>
+                                    <constraint firstItem="29119" firstAttribute="top" secondItem="29118" secondAttribute="bottom" constant="8" symbolic="YES" id="rHD-8K-2yT"/>
+                                    <constraint firstItem="29013" firstAttribute="leading" secondItem="4132" secondAttribute="trailing" constant="8" symbolic="YES" id="v5z-Iw-nHh"/>
+                                    <constraint firstItem="4260" firstAttribute="bottom" secondItem="62140" secondAttribute="bottom" id="vWk-7p-Z6m"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2241" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1ty-4L-0dg"/>
+                            <constraint firstItem="3909" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="68" id="APk-qz-uxc"/>
+                            <constraint firstItem="2241" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="GxL-rq-PRT"/>
+                            <constraint firstItem="2241" firstAttribute="trailing" secondItem="3909" secondAttribute="trailing" id="YcB-4e-rpx"/>
+                            <constraint firstAttribute="trailing" secondItem="2241" secondAttribute="trailing" id="Zes-K8-iRv"/>
+                            <constraint firstItem="3909" firstAttribute="top" secondItem="2241" secondAttribute="bottom" id="fUb-HF-ZBL"/>
+                            <constraint firstItem="2241" firstAttribute="leading" secondItem="3909" secondAttribute="leading" id="oSc-jI-Ftm"/>
+                            <constraint firstItem="3909" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="rPk-Fh-tYz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BluetoothButton" destination="4177" id="name-outlet-4177"/>
+                        <outlet property="BluetoothViewObj" destination="4260" id="name-outlet-4260"/>
+                        <outlet property="GraphViewObj1" destination="28519" id="name-outlet-28519"/>
+                        <outlet property="GraphViewObj2" destination="29013" id="name-outlet-29013"/>
+                        <outlet property="GraphViewObj3" destination="29118" id="name-outlet-29118"/>
+                        <outlet property="GraphViewObj4" destination="29119" id="name-outlet-29119"/>
+                        <outlet property="MusicViewObj" destination="62140" id="name-outlet-62140"/>
+                        <outlet property="NotesViewObj" destination="59803" id="name-outlet-59803"/>
+                        <outlet property="SettingsViewObj" destination="62911" id="name-outlet-62911"/>
+                        <outlet property="TopBar" destination="2241" id="name-outlet-2241"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bluetooth_icon2.png" width="144" height="144"/>
+    </resources>
+</document>

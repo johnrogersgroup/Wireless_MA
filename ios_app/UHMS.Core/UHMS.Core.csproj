@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.0.1" />
+    <PackageReference Include="MvvmCross" Version="6.1.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Plugin.BLE" Version="2.0.0-pre1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewModels\ExtendedViewModels.cs" />
+    <Compile Remove="ViewModels\BluetoothDeviceViewModel.cs" />
+    <Compile Remove="Models\Data\SensorDataRepository.cs" />
+    <Compile Remove="Models\Bluetooth\DataCharacteristic.cs" />
+    <Compile Remove="Models\BluetoothModel.cs" />
+    <Compile Remove="Models\IBluetoothModel.cs" />
+    <Compile Remove="Models\Bluetooth\CentralDevice.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\Bluetooth\" />
+    <Folder Include="ViewModels\Graph\" />
+    <Folder Include="ViewModels\Download\" />
+    <Folder Include="ViewModels\DeviceSlot\" />
+  </ItemGroup>
+</Project>
